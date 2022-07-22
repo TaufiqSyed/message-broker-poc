@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title RabbitMQ Publisher
+  body 
+    h1 RabbitMQ Publisher
+    h2 Register
+    form(method="post" action="/api/v1/users")
+      input(type="text" name="email" placeholder="Email")
+      input(type="text" name="phone" placeholder="Phone")
+      input(type="number" name="age" placeholder="Age")
+      button(type="submit") Create User

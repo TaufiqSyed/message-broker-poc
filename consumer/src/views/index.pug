@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title RabbitMQ Consumer 
+  body 
+    h1 RabbitMQ Consumer
+    p(id="newest-user") 
+
+    script(src="/socket.io/socket.io.js")
+    script.
+      var socket = io();
+      socket.on('create_user', function(user) {
+      var p = document.getElementById("newest-user");
+      p.innerHTML = `NEWEST USER - id: ${user.id}\nemail: ${user.email}\nphone: ${user.phone}\nage: ${user.age}`;
+      });
